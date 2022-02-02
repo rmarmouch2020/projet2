@@ -1,3 +1,57 @@
+French version follows
+
+P2 - ScrapeIt
+Prices extraction software
+
+This is :
+A scraping software for extracting data from an online library :
+
+product_page_url
+universal_ product_code (upc)
+title
+price_including_tax
+price_excluding_tax
+number_available
+product_description
+category
+review_rating
+image_url
+Usage cases :
+A. Get a single book datas from the website http://books.toscrape.com/ .
+
+B. Get all books datas from a specific category of http://books.toscrape.com/ .
+
+C. Get all datas from every categories and books from http://books.toscrape.com/ .
+
+Data will be stored in csv/category/category.csv files. Images will be included or not.
+
+Install :
+Generic install :
+Python3 must be installed on your operating system. You can get it from https://www.python.org/ . Consider installing and use a virtualenv, not your main python install.
+To install the needed libs, just use :
+python -m pop -r requirments.txt
+
+Windows install :
+A Makefile will do the work for you, just go on the application directory and use :
+
+make init
+
+To activate the virtualenv :
+
+source venv/bin/activate
+
+To clean the project :
+
+make clean
+
+Use :
+python main.py OPTIONS URL
+
+The software will guess if the given URL is one for a book, a category or the whole website.
+
+Option :
+-- images / -i before the url to download images.
+
 P2 - ScrapeIt
 Programme d'extraction des prix
 
