@@ -7,7 +7,7 @@ import os
 
 # Dictionnaire de caractères qui ne peuvent pas être utilisés pour les noms de dossiers ou de fichiers
 forbiddencharacters = {60: None, 62: None, 58: None, 8220: None, 47: None, 92: None, 124: None, 63: None, 42: None, 46: None, 39: None, 34: None}
-# Retrieve current directory path
+# Récupérer le chemin du répertoire courant
 current_path = os.getcwd()
 
 def categories_list(url):
