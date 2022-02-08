@@ -24,7 +24,7 @@ def categories_list(url):
         category_name = soup.find("div", class_="side_categories").find("ul", class_="nav nav-list").find("ul").findAll("li")[i].text.strip()
         category_url = "http://books.toscrape.com/" + soup.find("div", class_="side_categories").find("ul", class_="nav nav-list").find("ul").findAll("li")[i].find("a")["href"]
         categories_dictionary[category_name] = category_url
-        # Check if a directory by the name of category already exists and if not, creates one
+         # Vérifier si un répertoire par le nom de catégorie existe déjà et sinon, en créer un
         if not os.path.exists(current_path + "/Export/" + category_name.translate(forbiddencharacters)):
             os.makedirs(current_path + "/Export/" + category_name.translate(forbiddencharacters))
     return categories_dictionary
