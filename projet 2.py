@@ -19,7 +19,7 @@ def categories_list(url):
     soup = BeautifulSoup(r.text, features="html.parser")
     categories_dictionary = {}
     categories = soup.find("div", class_="side_categories").find("ul", class_="nav nav-list").find("ul").findAll("li")
-    # debut de la boucle qui parcourt la categorie 
+    # debut de la boucle qui parcourt les categories 
     for i in range(len(categories)):
         category_name = soup.find("div", class_="side_categories").find("ul", class_="nav nav-list").find("ul").findAll("li")[i].text.strip()
         category_url = "http://books.toscrape.com/" + soup.find("div", class_="side_categories").find("ul", class_="nav nav-list").find("ul").findAll("li")[i].find("a")["href"]
